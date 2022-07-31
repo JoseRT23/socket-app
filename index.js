@@ -60,4 +60,8 @@ io.on("connection", (socket) => {
     })
 });
 
-io.listen(5000);
+const PORT = process.env.PORT || 5000
+
+io.listen(PORT, function() {
+    console.log('Server listen in port ', PORT);
+});
